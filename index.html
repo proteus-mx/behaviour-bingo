@@ -99,6 +99,12 @@
       color: #1a1b1f;
     }
 
+    .logo-dot img {
+      width: 30px;
+      height: 30px;
+      border-radius: 12px;
+    }
+
     .logo-text {
       font-weight: 700;
       letter-spacing: 0.03em;
@@ -575,6 +581,29 @@
       color: var(--text-muted);
     }
 
+    /* ----------------- Video Demo ----------------- */
+
+    .video-demo {
+      margin-top: 2.5rem;
+      padding: 2rem 2.2rem;
+      border-radius: 22px;
+      background: radial-gradient(circle at top left, rgba(249, 199, 79, 0.22), rgba(5, 6, 8, 0.96));
+      border: 1px solid rgba(249, 199, 79, 0.75);
+      box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.9),
+        0 0 0 1px rgba(255, 255, 255, 0.05);
+    }
+
+    .video-demo h2 {
+      margin: 0 0 0.4rem;
+      font-size: 1.4rem;
+    }
+
+    .video-demo p {
+      margin: 0 0 1rem;
+      font-size: 0.9rem;
+    }
+
     /* ----------------- Pricing ----------------- */
 
     .pricing-layout {
@@ -952,7 +981,9 @@
   <div class="navbar-wrapper">
     <nav class="navbar">
       <div class="nav-left">
-        <div class="logo-dot">BB</div>
+        <div class="logo-dot">
+          <img src="AppIcon.png" alt="Behaviour Bingo Logo" style="width: 30px; height: 30px; border-radius: 12px;">
+        </div>
         <div class="logo-text">Behaviour Bingo</div>
       </div>
       <div class="nav-links">
@@ -963,7 +994,7 @@
         <a href="#faq">FAQ</a>
       </div>
       <div class="nav-cta">
-        <button class="btn btn-ghost btn-sm" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'});">
+        <button class="btn btn-ghost btn-sm" onclick="document.getElementById('video-demo').scrollIntoView({behavior:'smooth'}); document.querySelector('#video-demo video').play();">
           Watch demo
         </button>
         <a href="#cta" class="btn btn-primary btn-sm">
@@ -1229,6 +1260,22 @@
       </div>
     </section>
 
+    <!-- Video Demo -->
+    <section id="video-demo" class="hero-device" >
+      <div class="hero-device-inset">
+        <div class="device-status">
+          <span>Demo Video</span>
+          <span>🎥 Watch the action</span>
+        </div>
+        <div style="text-align: center; margin-top: 1.5rem;">
+          <video controls style="max-width: 40%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
+            <source src="Demo1.mov" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </section>
+
     <!-- Pricing -->
     <section id="pricing">
       <div class="section-eyebrow">Pricing</div>
@@ -1255,7 +1302,7 @@
           <div class="pricing-card">
             <div class="pricing-label">Starter</div>
             <div class="pricing-name">Single Player</div>
-            <div class="pricing-price">$0 <span>· One child</span></div>
+            <div class="pricing-price">$0 <span>· One player</span></div>
             <ul class="pricing-list">
               <li>1 player profile</li>
               <li>Unlimited custom boards</li>
@@ -1268,7 +1315,7 @@
           <div class="pricing-card highlight">
             <div class="pricing-tag">Most popular</div>
             <div class="pricing-label">Family</div>
-            <div class="pricing-name">Up to 5 kids</div>
+            <div class="pricing-name">Up to 5 players</div>
             <div class="pricing-price">$6.99 <span>one-time</span></div>
             <ul class="pricing-list">
               <li>Up to 5 player profiles</li>
